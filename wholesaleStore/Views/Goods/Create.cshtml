@@ -1,0 +1,31 @@
+﻿@model wholesaleStore.Models.CreateGoodsRequest
+
+@{
+    ViewData["Title"] = "Create Goods";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" id="Title" name="Title" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Numbers">Numbers</label>
+        <input type="number" id="Numbers" name="Numbers" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Maker">Maker</label>
+        <input type="text" id="Maker" name="Maker" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea id="Description" name="Description" class="form-control" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Cost">Cost</label>
+        <input type="number" id="Cost" name="Cost" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

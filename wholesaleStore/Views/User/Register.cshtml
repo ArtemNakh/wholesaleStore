@@ -1,0 +1,60 @@
+﻿@model wholesaleStore.Models.UserRegisterModel
+
+
+<form action="RegisterUser" method="post">
+    <div class="form-group">
+        <label for="Name">Ім'я</label>
+        <input type="text" id="Name" name="Name" class="form-control" value="@Model.Name" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Surname">Прізвище</label>
+        <input type="text" id="Surname" name="Surname" class="form-control" value="@Model.Surname" required />
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Електронна пошта</label>
+        <input type="email" id="Email" name="Email" class="form-control" value="@Model.Email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Phone">Телефон</label>
+        <input type="number" id="Phone" name="Phone" class="form-control" value="@Model.Phone" required />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Login">логін</label>
+        <input type="login" id="Login" name="Login" class="form-control" required />
+        <span asp-validation-for="Login" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Пароль</label>
+        <input type="password" id="Password" name="Password" class="form-control" required />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="ConfirmPassword">Підтвердження пароля</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" required />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Birthday">Дата народження</label>
+        <input type="date" id="Birthday" name="Birthday" class="form-control" value="@Model.Birthday.ToString("yyyy-MM-dd")" required />
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Зареєструватися</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

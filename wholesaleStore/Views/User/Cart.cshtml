@@ -1,0 +1,32 @@
+﻿@model IEnumerable<wholesaleStore.Core.Models.CartItem>
+
+<h1>Your Cart</h1>
+
+@if (Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Product.Title</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Product.Cost</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("ConfirmOrder", "User")" class="btn btn-success">Confirm Order</a>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}

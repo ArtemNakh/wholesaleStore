@@ -1,0 +1,32 @@
+﻿@model wholesaleStore.Core.Models.Enterprice
+
+@{
+    ViewData["Title"] = "Enterprice Details";
+}
+
+<h1>@Model.Title</h1>
+
+<div>
+    <h3>Field Activity</h3>
+    <p><strong>Name:</strong> @Model.FieldActivity.Name</p>
+    <p><strong>Description:</strong> @Model.FieldActivity.Description</p>
+</div>
+
+<div>
+    <h3>Address</h3>
+    <p><strong>Country:</strong> @Model.Addresses.Country</p>
+    <p><strong>Region:</strong> @Model.Addresses.Region</p>
+    <p><strong>Street:</strong> @Model.Addresses.Street</p>
+    <p><strong>Street Number:</strong> @Model.Addresses.NumberStreet</p>
+</div>
+
+<div>
+    <h3>Company Details</h3>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Phone:</strong> @Model.Phone</p>
+    <p><strong>Date Created:</strong> @Model.DateCreate.ToString("dd/MM/yyyy")</p>
+</div>
+
+<div>
+    <a href="@Url.Action("Index", "Enterprice")" class="btn btn-primary">Back to List</a>
+</div>

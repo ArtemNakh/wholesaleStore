@@ -1,0 +1,41 @@
+﻿@model IEnumerable<wholesaleStore.Core.Models.Goods>
+
+@{
+    ViewData["Title"] = "Goods List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a href="@Url.Action("Create", "Goods")" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Numbers</th>
+            <th>Maker</th>
+            <th>Description</th>
+            <th>Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var goods in Model)
+        {
+            <tr>
+                <td>@goods.Title</td>
+                <td>@goods.Numbers</td>
+                <td>@goods.Maker</td>
+                <td>@goods.Description</td>
+                <td>@goods.Cost</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Goods", new { id = goods.Id })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "Goods", new { id = goods.Id })" class="btn btn-danger">Delete</a>
+                    <a href="@Url.Action("Details", "Goods", new { id = goods.Id })" class="btn btn-info">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

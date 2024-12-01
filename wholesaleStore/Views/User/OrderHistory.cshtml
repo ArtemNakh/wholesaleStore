@@ -1,0 +1,19 @@
+﻿@model IEnumerable<wholesaleStore.Core.Models.Orders>
+
+<h1>Order History</h1>
+
+@if (!Model.Any())
+{
+    <p>You have not placed any orders yet.</p>
+}
+else
+{
+    foreach (var order in Model)
+    {
+        <div>
+            <h4>Order #@order.Id</h4>
+            <p>Cost: @order.Cost</p>
+            <p>Date: @order.DateOrder</p>
+        </div>
+    }
+}

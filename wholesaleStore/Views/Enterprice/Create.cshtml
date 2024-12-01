@@ -1,0 +1,75 @@
+﻿@model wholesaleStore.Models.EnterpriceViewModel
+
+@{
+    ViewData["Title"] = "Create Enterprice";
+}
+
+<h1>Create Enterprice</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="FieldActivityName">Field Activity Name</label>
+        <input type="text" class="form-control" id="FieldActivityName" name="FieldActivityName" required />
+    </div>
+    <div class="form-group">
+        <label for="FieldActivityDescription">Field Activity Description</label>
+        <input type="text" class="form-control" id="FieldActivityDescription" name="FieldActivityDescription" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Country">Country</label>
+        <input type="text" class="form-control" id="Country" name="Country" required />
+    </div>
+    <div class="form-group">
+        <label for="Region">Region</label>
+        <input type="text" class="form-control" id="Region" name="Region" required />
+    </div>
+    <div class="form-group">
+        <label for="Street">Street</label>
+        <input type="text" class="form-control" id="Street" name="Street" required />
+    </div>
+    <div class="form-group">
+        <label for="NumberStreet">Street Number</label>
+        <input type="number" class="form-control" id="NumberStreet" name="NumberStreet" required />
+    </div>
+
+    <div class="form-group">
+        <label for="EnterpriceTitle">Enterprice Title</label>
+        <input type="text" class="form-control" id="EnterpriceTitle" name="EnterpriceTitle" required />
+    </div>
+    <div class="form-group">
+        <label for="DateCreate">Date Created</label>
+        <input type="date" class="form-control" id="DateCreate" name="DateCreate" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required />
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="number" class="form-control" id="Phone" name="Phone" required />
+    </div>
+
+    <div class="form-group">
+        <label for="AdministratorName">Administrator Name</label>
+        <input type="text" class="form-control" id="AdministratorName" name="AdministratorName" required />
+    </div>
+    <div class="form-group">
+        <label for="AdministratorSurname">Administrator Surname</label>
+        <input type="text" class="form-control" id="AdministratorSurname" name="AdministratorSurname" required />
+    </div>
+    <div class="form-group">
+        <label for="AdministratorPhone">Administrator Phone</label>
+        <input type="number" class="form-control" id="AdministratorPhone" name="AdministratorPhone" />
+    </div>
+    <div class="form-group">
+        <label for="AdministratorLogin">Administrator Login</label>
+        <input type="text" class="form-control" id="AdministratorLogin" name="AdministratorLogin" required />
+    </div>
+    <div class="form-group">
+        <label for="AdministratorPassword">Administrator Password</label>
+        <input type="password" class="form-control" id="AdministratorPassword" name="AdministratorPassword" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

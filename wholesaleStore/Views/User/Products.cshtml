@@ -1,0 +1,13 @@
+﻿@model IEnumerable<wholesaleStore.Core.Models.Goods>
+
+<h1>Products</h1>
+
+@foreach (var product in Model)
+{
+    <div class="product">
+        <h3>@product.Title</h3>
+        <p>@product.Description</p>
+        <p>Price: @product.Cost</p>
+        <a href="@Url.Action("AddToCart", "User", new { productId = product.Id })" class="btn btn-primary">Add to Cart</a>
+    </div>
+}

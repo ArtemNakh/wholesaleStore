@@ -1,0 +1,46 @@
+﻿@model wholesaleStore.Models.GoodsEditRequest
+
+@{
+    ViewData["Title"] = "Edit Goods";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+   
+
+    <div class="form-group">
+        <label for="Title" class="control-label">Title</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Maker" class="control-label">Maker</label>
+        <input asp-for="Maker" class="form-control" />
+        <span asp-validation-for="Maker" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Description" class="control-label">Description</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Cost" class="control-label">Cost</label>
+        <input asp-for="Cost" type="number" class="form-control" />
+        <span asp-validation-for="Cost" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Numbers" class="control-label">Numbers</label>
+        <input asp-for="Numbers" type="number" class="form-control" />
+        <span asp-validation-for="Numbers" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<a href="@Url.Action("Index", "Goods")" class="btn btn-secondary">Back to List</a>

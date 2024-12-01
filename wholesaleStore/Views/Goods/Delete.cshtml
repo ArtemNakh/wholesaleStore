@@ -1,0 +1,46 @@
+﻿@model wholesaleStore.Core.Models.Goods
+
+@{
+    ViewData["Title"] = "Delete Goods";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert alert-warning">
+    <strong>Warning!</strong> Are you sure you want to delete this product?
+</div>
+
+<div class="form-group">
+    <label for="Id" class="control-label">Product ID</label>
+    <input type="text" class="form-control" value="@Model.Id" readonly />
+</div>
+
+<div class="form-group">
+    <label for="Title" class="control-label">Title</label>
+    <input type="text" class="form-control" value="@Model.Title" readonly />
+</div>
+
+<div class="form-group">
+    <label for="Maker" class="control-label">Maker</label>
+    <input type="text" class="form-control" value="@Model.Maker" readonly />
+</div>
+
+<div class="form-group">
+    <label for="Description" class="control-label">Description</label>
+    <textarea class="form-control" readonly>@Model.Description</textarea>
+</div>
+
+<div class="form-group">
+    <label for="Cost" class="control-label">Cost</label>
+    <input type="number" class="form-control" value="@Model.Cost" readonly />
+</div>
+
+<div class="form-group">
+    <label for="Numbers" class="control-label">Numbers</label>
+    <input type="number" class="form-control" value="@Model.Numbers" readonly />
+</div>
+
+<form method="post" action="@Url.Action("DeleteConfirmed", "Goods", new { id = Model.Id })">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index", "Goods")" class="btn btn-secondary">Cancel</a>
+</form>
